@@ -1,4 +1,5 @@
 - name: Add Canonical Partners PPA
+  become: yes
   apt_repository:
     repo: deb http://archive.canonical.com/ubuntu {{ ansible_distribution_release }} partner
     state: present
