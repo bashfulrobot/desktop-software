@@ -1,0 +1,52 @@
+---
+# - name: removing unwanted snaps
+#   become: yes
+#   snap:
+#     name: "{{ remsnaps }}"
+#     state: absent
+#   vars:
+#     remsnaps:
+#       - croc
+#       - polar-bookshelf
+
+- name: install general snap packages
+  become: yes
+  snap:
+    name:
+    #   - spotify
+    #   - hiri
+    #   - lxd
+      - ncspot
+    #   - simplescreenrecorder
+      - bitwarden
+      - bw
+      - icdiff
+#   - mumble
+      - review-tools
+      - standard-notes
+      - scrcpy
+    #   - htmldoc
+    #   - libreoffice
+      # - ephemeral
+    #   - glimpse-editor
+    #   - cheat
+      - telegram-desktop
+    #   - drawio
+    #   - foliate
+      - todoist
+    #   - beekeeper-studio
+
+- name: install general classic snap packages
+  become: yes
+  snap:
+    name: "{{ classicsnaps }}"
+    classic: yes
+  vars:
+    classicsnaps:
+      - go
+      - snapcraft
+      - snapdiff
+      - slack
+    #   - code-insiders
+
+      - kubectl

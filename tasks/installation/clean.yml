@@ -1,0 +1,7 @@
+---
+# Clean up system post installaation tasks
+- name: autoremove and purge apt packages
+  become: yes
+  apt:
+    autoremove: yes
+    purge: yes

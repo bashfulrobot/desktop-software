@@ -1,0 +1,22 @@
+---
+# Needed as update_cache can fail if missing
+- name: install apt-transport-https
+  become: yes
+  apt:
+    name: apt-transport-https
+    state: "present"
+
+# update the system
+- name: updating the base ubuntu system
+  become: yes
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+# import tasks for software installs
+- include_tasks: "installation/ppas.yml"
+- include_tasks: "installation/general/apt.yml"
+- include_tasks: "installation/general/snap.yml"
+# - include_tasks: "installation/advanced/docker.yml"
+# - include_tasks: "installation/advanced/peek.yml"
+- include_tasks: "installation/clean.yml"

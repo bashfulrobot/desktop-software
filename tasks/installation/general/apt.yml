@@ -1,0 +1,111 @@
+# - name: Remove Desktop APT Packages
+#   apt:
+#     name: "{{ rempackages }}"
+#     state: absent
+#   vars:
+#     rempackages:
+#       - libreoffice-*
+#       - plank
+#       - geary
+#       - gnome-screenshot
+
+
+- name: install software via apt
+  become: yes
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - git
+      - ppa-purge
+      - peek
+    #   - audacity
+    #   - peek
+      - xclip
+      - ncdu
+      - tmux
+      - openssh-server
+      - ubuntu-restricted-extras
+    #   - debconf-utils
+    #   - debhelper
+    #   - ubuntu-dev-tools
+    #   - piuparts
+    #   - schroot
+    #   - sbuild
+      - lftp
+      - htop
+    #   - celluloid
+      - gnome-firmware
+      - calibre
+    #   - whois
+    #   - apt-transport-https
+    #   - ca-certificates
+    #   - software-properties-common
+      - python3-pip
+    #   - snapd-xdg-open
+      - flameshot
+    #   - python-psutil
+    #   - psutils
+    #   - libimage-exiftool-perl
+      - libcurl4
+      - curl
+      - gnupg-agent
+      - font-manager
+      - gnome-calculator
+    #   - uncrustify
+    #   - devscripts
+    #   - software-properties-gtk
+      - gnome-disk-utility
+    #   - dlocate
+      - ttf-mscorefonts-installer
+      - fonts-emojione
+      - ppa-purge
+    #   - pylint
+    #   - gtk-3-examples
+    #   - libgtk-3-0
+      - seafile-cli
+      - dialog
+      # - pdfarranger
+    #   - encfs
+    #   - graphviz
+    #   - budgie-applications-menu-applet
+    #   - budgie-window-shuffler
+    #   - budgie-clockworks-applet
+    #   - budgie-wallstreet
+    #   - budgie-calendar-applet
+    #   - zeitgeist
+    #   - pulseaudio
+    #   - pavucontrol
+    #   - nordvpn
+    #   - gocryptfs
+    #   - sirikali
+    #   - insync
+    #   - insync-nemo
+    #   - preload
+      - jq
+    #   - brave-browser-nightly
+    #   - tailscale
+    #   - syncthing
+    #   - dh-make
+    #   - solaar
+    #   - piper
+    #   - profile-sync-daemon
+      - bat
+    #   - seahorse
+    #   - mcomix
+    #   - powertop
+    #   - flatpak
+    #   - gnome-software-plugin-flatpak
+    #   - stacer
+
+# - name: Install Xmind .deb package.
+#   apt:
+#     deb: https://www.xmind.net/xmind/downloads/XMind-2020-for-Linux-amd-64bit-{{ xmind_version }}.deb
+
+# - name: Install xbanish .deb package.
+#   apt:
+#     deb: https://launchpad.net/~minos-archive/+archive/ubuntu/main/+files/xbanish_202005040308+git46-minos~ubuntu20.04.1_amd64.deb
+
+# - name: Install Espanso .deb package from Github.
+#   apt:
+#     deb: https://github.com/federico-terzi/espanso/releases/latest/download/espanso-debian-amd64.deb
