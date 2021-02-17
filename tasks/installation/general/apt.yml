@@ -43,6 +43,8 @@
     #   - dlocate
       - ttf-mscorefonts-installer
       - fonts-emojione
+      - fonts-noto-color-emoji
+      - fonts-recommended
       - ppa-purge
       - seafile-cli
       - dialog
