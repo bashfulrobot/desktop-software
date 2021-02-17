@@ -20,8 +20,6 @@
       - ppa-purge
       - peek
       - python3-pip
-    #   - audacity
-    #   - peek
       - xclip
       - ncdu
       - tmux
@@ -40,7 +38,6 @@
       - font-manager
       - gnome-calculator
       - gnome-disk-utility
-    #   - dlocate
       - ttf-mscorefonts-installer
       - fonts-emojione
       - fonts-noto-color-emoji
@@ -48,6 +45,12 @@
       - ppa-purge
       - seafile-cli
       - dialog
+      - android-tools-adb
+      - jq
+      - bat
+          #   - audacity
+    #   - peek
+      #   - dlocate
       # - pdfarranger
     #   - encfs
     #   - graphviz
@@ -60,14 +63,12 @@
     #   - insync
     #   - insync-nemo
     #   - preload
-      - jq
     #   - tailscale
     #   - syncthing
     #   - dh-make
     #   - solaar
     #   - piper
     #   - profile-sync-daemon
-      - bat
     #   - seahorse
     #   - mcomix
     #   - powertop
