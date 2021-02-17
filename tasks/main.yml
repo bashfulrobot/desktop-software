@@ -18,3 +18,6 @@
 - include_tasks: "installation/general/apt.yml"
 - include_tasks: "installation/general/snap.yml"
 - include_tasks: "installation/general/pip.yml"
+- include_tasks: "installation/general/github.yml"
+  tags:
+  - github
