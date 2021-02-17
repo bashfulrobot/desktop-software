@@ -49,14 +49,14 @@
       - slack
       - kubectl
 
-- name: Install Multipass Snap Package --channel=beta --classic
+- name: install multipass snap package --channel=beta --classic
   become: yes
   snap:
     name: multipass
     channel: beta
     classic: yes
 
-- name: Install Snap Packages from --channel=edge
+- name: install snap packages from --channel=edge
   become: yes
   snap:
     name: "{{ edgesnaps }}"
@@ -67,7 +67,7 @@
       - authy
       - shfmt
 
-- name: Install Snap Packages --channel=edge --classic
+- name: install snap packages --channel=edge --classic
   become: yes
   snap:
     name: "{{ edgeclassicsnaps }}"
@@ -78,7 +78,7 @@
       - restic
       - espanso
 
-- name: Install Hugo Snap Package --channel=extended/edge
+- name: install hugo snap package --channel=extended/edge
   become: yes
   snap:
     name: hugo
