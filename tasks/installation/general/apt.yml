@@ -24,13 +24,11 @@
       - ncdu
       - tmux
       - openssh-server
-      - ubuntu-restricted-extras
       - lftp
       - htop
       - gnome-firmware
       - calibre
       - whois
-      - python3-pip
       - flameshot
       - libcurl4
       - curl
@@ -42,9 +40,9 @@
       - fonts-emojione
       - fonts-noto-color-emoji
       - fonts-recommended
-      - ppa-purge
       - seafile-cli
       - dialog
+    #   scrcpy snap dependency
       - android-tools-adb
       - jq
       - bat
