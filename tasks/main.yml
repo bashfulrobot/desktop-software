@@ -17,3 +17,4 @@
 - include_tasks: "installation/ppas.yml"
 - include_tasks: "installation/general/apt.yml"
 - include_tasks: "installation/general/snap.yml"
+- include_tasks: "installation/general/pip.yml"

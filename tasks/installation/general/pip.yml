@@ -1,0 +1,8 @@
+- name: install pip packages
+  pip:
+    name:
+      - ansible-lint
+      - telegram-send
+      - gcp
+      - github3.py
+      - black

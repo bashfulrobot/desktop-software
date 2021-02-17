@@ -19,6 +19,7 @@
       - git
       - ppa-purge
       - peek
+      - python3-pip
     #   - audacity
     #   - peek
       - xclip
