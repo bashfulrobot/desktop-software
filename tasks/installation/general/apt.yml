@@ -30,7 +30,7 @@
       - htop
       - gnome-firmware
       - calibre
-       - whois
+      - whois
       - python3-pip
       - flameshot
       - libcurl4
