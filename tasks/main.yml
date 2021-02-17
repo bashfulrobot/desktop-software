@@ -21,3 +21,4 @@
 - include_tasks: "installation/general/github.yml"
   tags:
   - github
+  - skip-tests
