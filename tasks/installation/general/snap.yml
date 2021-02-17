@@ -79,6 +79,7 @@
       - espanso
 
 - name: Install Hugo Snap Package --channel=extended/edge
+  become: yes
   snap:
     name: hugo
     channel: extended/edge
