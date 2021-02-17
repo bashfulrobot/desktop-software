@@ -26,53 +26,28 @@
       - tmux
       - openssh-server
       - ubuntu-restricted-extras
-    #   - debconf-utils
-    #   - debhelper
-    #   - ubuntu-dev-tools
-    #   - piuparts
-    #   - schroot
-    #   - sbuild
       - lftp
       - htop
-    #   - celluloid
       - gnome-firmware
       - calibre
-    #   - whois
-    #   - apt-transport-https
-    #   - ca-certificates
-    #   - software-properties-common
+       - whois
       - python3-pip
-    #   - snapd-xdg-open
       - flameshot
-    #   - python-psutil
-    #   - psutils
-    #   - libimage-exiftool-perl
       - libcurl4
       - curl
       - gnupg-agent
       - font-manager
       - gnome-calculator
-    #   - uncrustify
-    #   - devscripts
-    #   - software-properties-gtk
       - gnome-disk-utility
     #   - dlocate
       - ttf-mscorefonts-installer
       - fonts-emojione
       - ppa-purge
-    #   - pylint
-    #   - gtk-3-examples
-    #   - libgtk-3-0
       - seafile-cli
       - dialog
       # - pdfarranger
     #   - encfs
     #   - graphviz
-    #   - budgie-applications-menu-applet
-    #   - budgie-window-shuffler
-    #   - budgie-clockworks-applet
-    #   - budgie-wallstreet
-    #   - budgie-calendar-applet
     #   - zeitgeist
     #   - pulseaudio
     #   - pavucontrol
@@ -83,7 +58,6 @@
     #   - insync-nemo
     #   - preload
       - jq
-    #   - brave-browser-nightly
     #   - tailscale
     #   - syncthing
     #   - dh-make
