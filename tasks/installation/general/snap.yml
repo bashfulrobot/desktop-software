@@ -47,6 +47,35 @@
       - snapcraft
       - snapdiff
       - slack
-    #   - code-insiders
-
       - kubectl
+
+- name: Install Multipass Snap Package --channel=beta --classic
+  snap:
+    name: multipass
+    channel: beta
+    classic: yes
+
+- name: Install Snap Packages from --channel=edge
+  snap:
+    name: "{{ edgesnaps }}"
+    channel: edge
+  vars:
+    edgesnaps:
+      - irccloud
+      - authy
+      - shfmt
+
+- name: Install Snap Packages --channel=edge --classic
+  snap:
+    name: "{{ edgeclassicsnaps }}"
+    channel: edge
+    classic: yes
+  vars:
+    edgeclassicsnaps:
+      - restic
+      - espanso
+
+- name: Install Hugo Snap Package --channel=extended/edge
+  snap:
+    name: hugo
+    channel: extended/edge
