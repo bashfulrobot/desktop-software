@@ -1,8 +1,13 @@
-- name: Add Canonical Partners PPA
+- name: enable canonical partners ppa
   become: yes
   apt_repository:
     repo: deb http://archive.canonical.com/ubuntu {{ ansible_distribution_release }} partner
     state: present
+
+- name: enable ubuntu restricted extras ppa
+  become: yes
+  apt:
+    name: ubuntu-restricted-extras
 
 # - name: Add NordVPN APT signing Keys
 #   apt_key:
