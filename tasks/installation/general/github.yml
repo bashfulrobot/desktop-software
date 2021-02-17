@@ -1,4 +1,4 @@
-- name: Get latest release version of COD from GitHub
+- name: get latest release version of cod from github
   github_release:
     user: dim-an
     repo: cod
@@ -9,7 +9,8 @@
 # JSON
 # - debug: msg="{{ cod_release.tag }}"
 
-- name: Download & Extract COD Tgz #noqa 503
+- name: download & extract cod tgz #noqa 503
+  become: yes
   unarchive:
     src: "https://github.com/dim-an/cod/releases/download/{{ cod_release.tag }}/cod-Linux.tgz"
     dest: /usr/local/bin
@@ -18,7 +19,7 @@
     remote_src: yes
   when: cod_release.changed
 
-- name: Get latest release version of comics-downloader from GitHub
+- name: get latest release version of comics-downloader from github
   github_release:
     user: Girbons
     repo: comics-downloader
@@ -27,43 +28,46 @@
 
 # - debug: msg="{{ comicdl_release.tag }}"
 
-- name: Download comics-downloader
+- name: download comics-downloader
+  become: yes
   get_url:
     url: https://github.com/Girbons/comics-downloader/releases/download/{{ comicdl_release.tag }}/comics-downloader
     dest: /usr/local/bin/comics-downloader
     mode: '0755'
   # when: comicdl_release.changed
 
-- name: Get latest release version of Terraform from GitHub
+- name: get latest release version of terraform from github
   github_release:
     user: hashicorp
     repo: terraform
     action: latest_release
   register: terraform_release
 
-- name: Clean up Terraform version number
+- name: clean up terraform version number
   set_fact:
     terraform_version: "{{ terraform_release.tag | regex_replace('^v', '') }}"
 
-- name: Download & Extract Terraform Tgz
+- name: download & extract terraform tgz
+  become: yes
   unarchive:
     src: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
     dest: /usr/local/bin
     remote_src: yes
   # when: terraform_release.changed
 
-- name: Get latest release version of Gh ClI from GitHub
+- name: get latest release version of gh cli from github
   github_release:
     user: cli
     repo: cli
     action: latest_release
   register: gh_cli_release
 
-- name: Get GH CLI version number w/o V
+- name: get gh cli version number w/o v
   set_fact:
     gh_cli_version: "{{ gh_cli_release.tag | regex_replace('^v', '') }}"
 
-- name: Install GH CLI .deb package from Github.
+- name: install gh cli .deb package from github
+  become: yes
   apt:
     deb: https://github.com/cli/cli/releases/download/{{ gh_cli_release.tag }}/gh_{{ gh_cli_version }}_linux_amd64.deb
   # when: gh_cli_release.changed
