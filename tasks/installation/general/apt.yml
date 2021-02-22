@@ -46,6 +46,7 @@
       - android-tools-adb
       - jq
       - bat
+      - regolith-look-dracula
           #   - audacity
     #   - peek
       #   - dlocate
