@@ -1,0 +1,24 @@
+# Needed for the cargo install of alacritty in the rust install role
+- name: install alacritty dependencies
+  become: yes
+  apt:
+    name: "{{ alapkgs }}"
+  vars:
+    alapkgs:
+      - cmake
+      - pkg-config
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxcb-xfixes0-dev
+      - python3
+
+- name: add mmstick76/alacritty ppa
+  apt_repository:
+    repo: ppa:mmstick76/alacritty
+    update_cache: yes
+    state: present
+
+- name: install alacritty
+  become: yes
+  apt:
+    name: alacritty
