@@ -5,37 +5,37 @@
 
 # packages to install via apt
 INSTALL_APT_PACKAGES:
-  -git
-  -ppa-purge
-  -peek
-  -python3-pip
-  -xclip
-  -ncdu
-  -tmux
-  -openssh-server
-  -lftp
-  -htop
-  -gnome-firmware
-  -calibre
-  -whois
-  -flameshot
-  -libcurl4
-  -curl
-  -gnupg-agent
-  -font-manager
-  -gnome-calculator
-  -gnome-disk-utility
-  -ttf-mscorefonts-installer
-  -fonts-emojione
-  -fonts-noto-color-emoji
-  -fonts-recommended
-  -seafile-cli
-  -dialog
+  - git
+  - ppa-purge
+  - peek
+  - python3-pip
+  - xclip
+  - ncdu
+  - tmux
+  - openssh-server
+  - lftp
+  - htop
+  - gnome-firmware
+  - calibre
+  - whois
+  - flameshot
+  - libcurl4
+  - curl
+  - gnupg-agent
+  - font-manager
+  - gnome-calculator
+  - gnome-disk-utility
+  - ttf-mscorefonts-installer
+  - fonts-emojione
+  - fonts-noto-color-emoji
+  - fonts-recommended
+  - seafile-cli
+  - dialog
   # scrcpy snap dependency
-  -android-tools-adb
-  -jq
-  -bat
-  -regolith-look-dracula
+  - android-tools-adb
+  - jq
+  - bat
+  - regolith-look-dracula
 # - audacity
 # - peek
 # - dlocate
