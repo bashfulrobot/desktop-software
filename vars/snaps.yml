@@ -1,0 +1,50 @@
+---
+# install general snap packages
+INSTALL_SNAP_PACKAGES:
+  - spotify
+  - ncspot
+  - emote
+  - bitwarden
+  - bw
+  - icdiff
+  - review-tools
+  - standard-notes
+  - scrcpy
+  - telegram-desktop
+  - todoist
+# - hiri
+# - lxd
+# - simplescreenrecorder
+# - mumble
+# - htmldoc
+# - libreoffice
+# - ephemeral
+# - glimpse-editor
+# - cheat
+# - drawio
+# - foliate
+# - beekeeper-studio
+
+# install general snap packages --classic
+INSTALL_CLASSIC_SNAP_PACKAGES:
+  - go
+  - snapcraft
+  - snapdiff
+  - slack
+  - kubectl
+
+# install snap packages from --channel=edge
+INSTALL_EDGE_SNAP_PACKAGES:
+  - irccloud
+  - authy
+  - shfmt
+
+# install snap packages --channel=edge --classic
+INSTALL_EDGE_CLASSIC_SNAP_PACKAGES:
+ - restic
+ - espanso
+
+#  removing unwanted snaps
+# REMOVE_SNAPS:
+#   - croc
+#   - polar-bookshelf

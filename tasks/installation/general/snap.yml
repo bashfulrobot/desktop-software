@@ -1,54 +1,35 @@
 ---
-# - name: removing unwanted snaps
-#   become: yes
-#   snap:
-#     name: "{{ remsnaps }}"
-#     state: absent
-#   vars:
-#     remsnaps:
-#       - croc
-#       - polar-bookshelf
+- name: removing unwanted snaps
+  become: yes
+  snap:
+    name: "{{ REMOVE_SNAPS }}"
+    state: absent
+  when:
+    - REMOVE_SNAPS is defined
 
 - name: install general snap packages
   become: yes
   snap:
-    name:
-    #   - spotify
-    #   - hiri
-    #   - lxd
-      - ncspot
-      - emote
-    #   - simplescreenrecorder
-      - bitwarden
-      - bw
-      - icdiff
-#   - mumble
-      - review-tools
-      - standard-notes
-      - scrcpy
-    #   - htmldoc
-    #   - libreoffice
-      # - ephemeral
-    #   - glimpse-editor
-    #   - cheat
-      - telegram-desktop
-    #   - drawio
-    #   - foliate
-      - todoist
-    #   - beekeeper-studio
+    name: "{{ INSTALL_SNAP_PACKAGES }}"
 
-- name: install general classic snap packages
+- name: install general snap packages --classic
   become: yes
   snap:
-    name: "{{ classicsnaps }}"
+    name: "{{ INSTALL_CLASSIC_SNAP_PACKAGES }}"
     classic: yes
-  vars:
-    classicsnaps:
-      - go
-      - snapcraft
-      - snapdiff
-      - slack
-      - kubectl
+
+- name: install snap packages from --channel=edge
+  become: yes
+  snap:
+    name: "{{ INSTALL_EDGE_SNAP_PACKAGES }}"
+    channel: edge
+
+- name: install snap packages --channel=edge --classic
+  become: yes
+  snap:
+    name: "{{ INSTALL_EDGE_CLASSIC_SNAP_PACKAGES }}"
+    channel: edge
+    classic: yes
 
 - name: install multipass snap package --channel=beta --classic
   become: yes
@@ -56,28 +37,6 @@
     name: multipass
     channel: beta
     classic: yes
-
-- name: install snap packages from --channel=edge
-  become: yes
-  snap:
-    name: "{{ edgesnaps }}"
-    channel: edge
-  vars:
-    edgesnaps:
-      - irccloud
-      - authy
-      - shfmt
-
-- name: install snap packages --channel=edge --classic
-  become: yes
-  snap:
-    name: "{{ edgeclassicsnaps }}"
-    channel: edge
-    classic: yes
-  vars:
-    edgeclassicsnaps:
-      - restic
-      - espanso
 
 - name: install hugo snap package --channel=extended/edge
   become: yes
