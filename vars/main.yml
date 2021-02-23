@@ -65,9 +65,7 @@ INSTALL_APT_PACKAGES:
 
 REMOVE_APT_PACKAGES:
   - libreoffice-*
-#   - plank
   - geary
-#   - gnome-screenshot
 
 ##### SNAPS #####
 
@@ -117,6 +115,6 @@ INSTALL_EDGE_CLASSIC_SNAP_PACKAGES:
  - espanso
 
 #  removing unwanted snaps
-# REMOVE_SNAPS:
-#   - croc
-#   - polar-bookshelf
+REMOVE_SNAPS:
+  - croc
+  - polar-bookshelf
