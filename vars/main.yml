@@ -1,2 +1,120 @@
 ---
 # vars file for software
+
+##### APT #####
+
+# packages to install via apt
+INSTALL_APT_PACKAGES:
+  - git
+  - ppa-purge
+  - peek
+  - python3-pip
+  - xclip
+  - ncdu
+  - tmux
+  - openssh-server
+  - lftp
+  - htop
+  - gnome-firmware
+  - calibre
+  - whois
+  - flameshot
+  - libcurl4
+  - curl
+  - gnupg-agent
+  - font-manager
+  - gnome-calculator
+  - gnome-disk-utility
+  - ttf-mscorefonts-installer
+  - fonts-emojione
+  - fonts-noto-color-emoji
+  - fonts-recommended
+  - seafile-cli
+  - dialog
+  # scrcpy snap dependency
+  - android-tools-adb
+  - jq
+  - bat
+  - regolith-look-dracula
+# - audacity
+# - peek
+# - dlocate
+# - pdfarranger
+# - encfs
+# - graphviz
+# - zeitgeist
+# - pulseaudio
+# - pavucontrol
+# - nordvpn
+# - gocryptfs
+# - sirikali
+# - insync
+# - insync-nemo
+# - preload
+# - syncthing
+# - dh-make
+# - solaar
+# - piper
+# - profile-sync-daemon
+# - seahorse
+# - mcomix
+# - powertop
+# - flatpak
+# - gnome-software-plugin-flatpak
+# - stacer
+
+REMOVE_APT_PACKAGES:
+  - libreoffice-*
+  - geary
+
+##### SNAPS #####
+
+# install general snap packages
+INSTALL_SNAP_PACKAGES:
+  - spotify
+  - ncspot
+  - emote
+  - bitwarden
+  - bw
+  - icdiff
+  - review-tools
+  - standard-notes
+  - scrcpy
+  - telegram-desktop
+  - todoist
+# - hiri
+# - lxd
+# - simplescreenrecorder
+# - mumble
+# - htmldoc
+# - libreoffice
+# - ephemeral
+# - glimpse-editor
+# - cheat
+# - drawio
+# - foliate
+# - beekeeper-studio
+
+# install general snap packages --classic
+INSTALL_CLASSIC_SNAP_PACKAGES:
+  - go
+  - snapcraft
+  - snapdiff
+  - slack
+  - kubectl
+
+# install snap packages from --channel=edge
+INSTALL_EDGE_SNAP_PACKAGES:
+  - irccloud
+  - authy
+  - shfmt
+
+# install snap packages --channel=edge --classic
+INSTALL_EDGE_CLASSIC_SNAP_PACKAGES:
+ - restic
+ - espanso
+
+#  removing unwanted snaps
+REMOVE_SNAPS:
+  - croc
+  - polar-bookshelf
