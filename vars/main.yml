@@ -1,8 +1,5 @@
 ---
 # vars file for software
 
-- name: include apt variables
-  include_vars: "apt.yml"
-
-- name: include snap variables
-  include_vars: "snaps.yml"
+- include_vars: "apt.yml"
+- include_vars: "snaps.yml"
