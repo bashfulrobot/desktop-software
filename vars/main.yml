@@ -1,7 +1,7 @@
 ---
 # vars file for software
 
----
+##### APT #####
 
 # packages to install via apt
 INSTALL_APT_PACKAGES:
@@ -69,7 +69,8 @@ REMOVE_APT_PACKAGES:
   - geary
 #   - gnome-screenshot
 
----
+##### SNAPS #####
+
 # install general snap packages
 INSTALL_SNAP_PACKAGES:
   - spotify
