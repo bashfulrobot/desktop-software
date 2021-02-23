@@ -16,7 +16,7 @@
 # import tasks for software installs
 - include_tasks: "installation/ppas.yml"
 - include_tasks: "installation/general/apt.yml"
-- include_tasks: "installation/advanced/alacritty.yml"
+# - include_tasks: "installation/advanced/alacritty.yml"
 - include_tasks: "installation/general/snap.yml"
 - include_tasks: "installation/general/pip.yml"
 - include_tasks: "installation/general/github.yml"
