@@ -82,6 +82,8 @@ INSTALL_SNAP_PACKAGES:
   - scrcpy
   - telegram-desktop
   - todoist
+  - hushboard
+  - dracula-gtk-theme
 # - hiri
 # - lxd
 # - simplescreenrecorder
