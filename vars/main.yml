@@ -84,6 +84,7 @@ INSTALL_SNAP_PACKAGES:
   - todoist
   - hushboard
   - dracula-gtk-theme
+  - amass
 # - hiri
 # - lxd
 # - simplescreenrecorder
